@@ -138,7 +138,7 @@ To view the list of options, issue =zutty -h= (short for =-help=):
 :   -altScroll      Alternate scroll mode
 :   -bg             Background color (default: 000000)
 :   -border         Border width in pixels (default: 2)
-:   -boldAsBright   Display bold test in bright colors (default: false)
+:   -boldAsBright   Display bold test in bright colors (default: true)
 :   -display        Display to connect to
 :   -fg             Foreground color (default: ffffff)
 :   -font           Font to use (default: 9x18)
@@ -449,11 +449,11 @@ These symlinks will allow you to use this font in Zutty by starting it
 via =-font t0-18=. Add a similar set of symlinks for each point size
 you want to be able to use.
 
-:   -boldAsBright   Font search path (default: /usr/share/fonts)
+:   -boldAsBright   Display bold text in bright colors [boolean]
 
 This option determines if zutty will couple the bold text attribute with
 brighter colors (8-15 as opposed to the standard 0-7), which falls in line
-with how xterm handles bold text. Enabling this option will cause bold text
+with how xterm handles bold text. Disabling this option will allow bold text
 to use both regular and bright colors.
 
 * Persistent configuration
@@ -473,7 +473,7 @@ want to change.
 : Zutty.title:                   Zero Cost TTY
 : Zutty.geometry:                120x45
 : Zutty.altScroll:               true
-: Zutty.boldAsBright:            false
+: Zutty.boldAsBright:            true
 : Zutty.selection:               clipboard
 : Zutty.font:                    Inconsolata
 : Zutty.fontsize:                18

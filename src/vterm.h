@@ -355,7 +355,7 @@ namespace zutty {
       bool localEcho = false;
       bool bracketedPasteMode = false;
       bool altScrollMode = false;
-      bool boldAsBright = false;
+      bool boldAsBright = true;
 
       bool horizMarginMode = false;
       uint16_t nColsEff = 0;

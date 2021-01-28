@@ -34,7 +34,7 @@ namespace zutty {
       {"altScroll",    XrmoptionNoArg,    "true",  "false",     "Alternate scroll mode"},
       {"bg",           XrmoptionSepArg,   nullptr, "000000",    "Background color"},
       {"border",       XrmoptionSepArg,   nullptr, "2",         "Border width in pixels"},
-      {"boldAsBright", XrmoptionSepArg,   nullptr, "false",     "Display bold text in bright colors"},
+      {"boldAsBright", XrmoptionSepArg,   nullptr, "true",      "Display bold text in bright colors"},
       {"display",      XrmoptionSepArg,   nullptr, nullptr,     "Display to connect to"},
       {"fg",           XrmoptionSepArg,   nullptr, "ffffff",    "Foreground color"},
       {"font",         XrmoptionSepArg,   nullptr, "9x18",      "Font to use"},
