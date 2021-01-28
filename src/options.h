@@ -31,24 +31,25 @@ namespace zutty {
    };
 
    static const std::vector <OptionDesc> optionsTable = {
-      {"altScroll", XrmoptionNoArg,    "true",  "false",     "Alternate scroll mode"},
-      {"bg",        XrmoptionSepArg,   nullptr, "000000",    "Background color"},
-      {"border",    XrmoptionSepArg,   nullptr, "2",         "Border width in pixels"},
-      {"display",   XrmoptionSepArg,   nullptr, nullptr,     "Display to connect to"},
-      {"fg",        XrmoptionSepArg,   nullptr, "ffffff",    "Foreground color"},
-      {"font",      XrmoptionSepArg,   nullptr, "9x18",      "Font to use"},
-      {"fontsize",  XrmoptionSepArg,   nullptr, "16",        "Font size"},
-      {"fontpath",  XrmoptionSepArg,   nullptr, "/usr/share/fonts", "Font search path"},
-      {"geometry",  XrmoptionSepArg,   nullptr, "80x24",     "Terminal size in chars"},
-      {"glinfo",    XrmoptionNoArg,    "true",  "false",     "Print OpenGL information"},
-      {"help",      XrmoptionNoArg,    "true",  "false",     "Print usage information"},
-      {"rv",        XrmoptionNoArg,    "true",  "false",     "Reverse video"},
-      {"selection", XrmoptionSepArg,   nullptr, "primary",   "Selection target"},
-      {"shell",     XrmoptionSepArg,   nullptr, "/bin/bash", "Shell program to run"},
-      {"title",     XrmoptionSepArg,   nullptr, "Zutty",     "Window title"},
-      {"quiet",     XrmoptionNoArg,    "true",  "false",     "Silence logging output"},
-      {"verbose",   XrmoptionNoArg,    "true",  "false",     "Output info messages"},
-      {"e",         XrmoptionSkipLine, nullptr, nullptr,     "Command line to run"},
+      {"altScroll",    XrmoptionNoArg,    "true",  "false",     "Alternate scroll mode"},
+      {"bg",           XrmoptionSepArg,   nullptr, "000000",    "Background color"},
+      {"border",       XrmoptionSepArg,   nullptr, "2",         "Border width in pixels"},
+      {"boldAsBright", XrmoptionSepArg,   nullptr, "false",     "Display bold text in bright colors"},
+      {"display",      XrmoptionSepArg,   nullptr, nullptr,     "Display to connect to"},
+      {"fg",           XrmoptionSepArg,   nullptr, "ffffff",    "Foreground color"},
+      {"font",         XrmoptionSepArg,   nullptr, "9x18",      "Font to use"},
+      {"fontsize",     XrmoptionSepArg,   nullptr, "16",        "Font size"},
+      {"fontpath",     XrmoptionSepArg,   nullptr, "/usr/share/fonts", "Font search path"},
+      {"geometry",     XrmoptionSepArg,   nullptr, "80x24",     "Terminal size in chars"},
+      {"glinfo",       XrmoptionNoArg,    "true",  "false",     "Print OpenGL information"},
+      {"help",         XrmoptionNoArg,    "true",  "false",     "Print usage information"},
+      {"rv",           XrmoptionNoArg,    "true",  "false",     "Reverse video"},
+      {"selection",    XrmoptionSepArg,   nullptr, "primary",   "Selection target"},
+      {"shell",        XrmoptionSepArg,   nullptr, "/bin/bash", "Shell program to run"},
+      {"title",        XrmoptionSepArg,   nullptr, "Zutty",     "Window title"},
+      {"quiet",        XrmoptionNoArg,    "true",  "false",     "Silence logging output"},
+      {"verbose",      XrmoptionNoArg,    "true",  "false",     "Output info messages"},
+      {"e",            XrmoptionSkipLine, nullptr, nullptr,     "Command line to run"},
    };
 
    struct Options
@@ -69,6 +70,7 @@ namespace zutty {
       Color bg;
       bool rv;
       bool altScrollMode;
+      bool boldAsBright;
       bool quiet;
       bool verbose;
 

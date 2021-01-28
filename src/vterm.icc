@@ -1574,7 +1574,7 @@ namespace zutty {
    {
       if (fgPalIx < 0)
          *fg = opts.fg;
-      else if (attrs.bold && fgPalIx >= 0 && fgPalIx <= 7)
+      else if (attrs.bold && fgPalIx >= 0 && fgPalIx <= 7 && opts.boldAsBright)
          *fg = palette256 [fgPalIx + 8];
       else
          *fg = palette256 [fgPalIx];

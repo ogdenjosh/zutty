@@ -240,6 +240,7 @@ namespace zutty {
          if (rv)
             std::swap (fg, bg);
          altScrollMode = getBool ("altScroll");
+         boldAsBright = getBool ("boldAsBright");
          quiet = getBool ("quiet");
          verbose = getBool ("verbose");
       }
